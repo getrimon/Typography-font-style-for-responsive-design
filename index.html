@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #151515;
+        }
+        img{
+            width: 100%;
+        }
+        body .main-container{
+            width: 1280px;
+            margin: auto;
+        }
+        body .main-container .header{
+            display: flex;
+            background: #168080;
+        }
+        body .main-container .header .img{
+            width: 20%;
+        }
+        body .main-container .header .text {
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 40px;
+            border-left: 2px solid #1b1b1b;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #CDE6E6;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 1.3px;
+            text-transform: uppercase;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #303030;
+            color: #bdbdbd;
+        }
+        th {
+            background-color: #303030;
+            color: #bdbdbd;
+        }
+        tr:nth-child(even) {
+            background-color: #1b1b1b;
+        }
+        tr{
+            transition: .5s ease;
+        }
+        tr:hover {
+            background-color: #2e2e2ea6;
+            transition: .5s;
+        }
+        .category {
+            font-style: italic;
+        }
+       .icon {
+            font-size: 100px;
+            display: inline-block;
+            margin: 0 20px;
+            transition: transform 0.2s;
+        }
+        .icon:hover {
+            transform: scale(1.1);
+        }
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.089); 
+            pointer-events: none;
+            animation: fade 1s forwards;
+        }
+        @keyframes fade {
+            to {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="main-container">
+       <div class="header">
+        <div class="img">
+            <img src="./responsive-text-size.png" alt="">
+        </div>
+        <div class="text">
+            <h1>Typography font style for responsive design</h1>
+        </div>
+       </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Element (Category)</th>
+                    <th>Desktop (≥1024px)</th>
+                    <th>Tablet (768px-1023px)</th>
+                    <th>Mobile (≤767px)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>H1 <span class="category">(Primary Heading)</span></td>
+                    <td>Font Size: 48px / 3rem<br>Font Weight: 700<br>Line Height: 1.2<br>Letter Spacing: -0.5px</td>
+                    <td>Font Size: 40px / 2.5rem<br>Font Weight: 700<br>Line Height: 1.3<br>Letter Spacing: -0.4px</td>
+                    <td>Font Size: 32px / 2rem<br>Font Weight: 700<br>Line Height: 1.4<br>Letter Spacing: -0.3px</td>
+                </tr>
+                <tr>
+                    <td>H2 <span class="category">(Secondary Heading)</span></td>
+                    <td>Font Size: 40px / 2.5rem<br>Font Weight: 700<br>Line Height: 1.3<br>Letter Spacing: -0.4px</td>
+                    <td>Font Size: 32px / 2rem<br>Font Weight: 700<br>Line Height: 1.4<br>Letter Spacing: -0.3px</td>
+                    <td>Font Size: 28px / 1.75rem<br>Font Weight: 700<br>Line Height: 1.5<br>Letter Spacing: -0.2px</td>
+                </tr>
+                <tr>
+                    <td>H3 <span class="category">(Tertiary Heading)</span></td>
+                    <td>Font Size: 32px / 2rem<br>Font Weight: 600<br>Line Height: 1.4<br>Letter Spacing: -0.3px</td>
+                    <td>Font Size: 28px / 1.75rem<br>Font Weight: 600<br>Line Height: 1.5<br>Letter Spacing: -0.2px</td>
+                    <td>Font Size: 24px / 1.5rem<br>Font Weight: 600<br>Line Height: 1.6<br>Letter Spacing: -0.1px</td>
+                </tr>
+                <tr>
+                    <td>H4 <span class="category">(Subtitle/Section)</span></td>
+                    <td>Font Size: 28px / 1.75rem<br>Font Weight: 600<br>Line Height: 1.5<br>Letter Spacing: -0.2px</td>
+                    <td>Font Size: 24px / 1.5rem<br>Font Weight: 600<br>Line Height: 1.6<br>Letter Spacing: -0.1px</td>
+                    <td>Font Size: 20px / 1.25rem<br>Font Weight: 600<br>Line Height: 1.6<br>Letter Spacing: 0px</td>
+                </tr>
+                <tr>
+                    <td>H5 <span class="category">(Subtitle/Small Heading)</span></td>
+                    <td>Font Size: 24px / 1.5rem<br>Font Weight: 500<br>Line Height: 1.5<br>Letter Spacing: -0.1px</td>
+                    <td>Font Size: 20px / 1.25rem<br>Font Weight: 500<br>Line Height: 1.6<br>Letter Spacing: 0px</td>
+                    <td>Font Size: 18px / 1.125rem<br>Font Weight: 500<br>Line Height: 1.6<br>Letter Spacing: 0px</td>
+                </tr>
+                <tr>
+                    <td>H6 <span class="category">(Minor Heading)</span></td>
+                    <td>Font Size: 20px / 1.25rem<br>Font Weight: 500<br>Line Height: 1.6<br>Letter Spacing: 0px</td>
+                    <td>Font Size: 18px / 1.125rem<br>Font Weight: 500<br>Line Height: 1.6<br>Letter Spacing: 0px</td>
+                    <td>Font Size: 16px / 1rem<br>Font Weight: 500<br>Line Height: 1.6<br>Letter Spacing: 0px</td>
+                </tr>
+                <tr>
+                    <td>Subtitle <span class="category">(Introductory Text)</span></td>
+                    <td>Font Size: 22px / 1.375rem<br>Font Weight: 400<br>Line Height: 1.5<br>Letter Spacing: 0px</td>
+                    <td>Font Size: 20px / 1.25rem<br>Font Weight: 400<br>Line Height: 1.6<br>Letter Spacing: 0px</td>
+                    <td>Font Size: 18px / 1.125rem<br>Font Weight: 400<br>Line Height: 1.6<br>Letter Spacing: 0px</td>
+                </tr>
+                <tr>
+                    <td>P <span class="category">(Paragraph Text)</span></td>
+                    <td>Font Size: 16px / 1rem<br>Font Weight: 400<br>Line Height: 1.8<br>Letter Spacing: 0px</td>
+                    <td>Font Size: 16px / 1rem<br>Font Weight: 400<br>Line Height: 1.8<br>Letter Spacing: 0px</td>
+                    <td>Font Size: 14px / 0.875rem<br>Font Weight: 400<br>Line Height: 1.8<br>Letter Spacing: 0px</td>
+                </tr>
+                <tr>
+                    <td>Button <span class="category">(Action Button)</span></td>
+                    <td>Font Size: 16px / 1rem<br>Font Weight: 600<br>Line Height: 1.5<br>Letter Spacing: 0.5px</td>
+                    <td>Font Size: 16px / 1rem<br>Font Weight: 600<br>Line Height: 1.5<br>Letter Spacing: 0.5px</td>
+                    <td>Font Size: 14px / 0.875rem<br>Font Weight: 600<br>Line Height: 1.5<br>Letter Spacing: 0.5px</td>
+                </tr>
+                <tr>
+                    <td>Accent Text <span class="category">(Highlighted Text)</span></td>
+                    <td>Font Size: 14px / 0.875rem<br>Font Weight: 500<br>Line Height: 1.7<br>Letter Spacing: 0.3px</td>
+                    <td>Font Size: 14px / 0.875rem<br>Font Weight: 500<br>Line Height: 1.7<br>Letter Spacing: 0.3px</td>
+                    <td>Font Size: 12px / 0.75rem<br>Font Weight: 500<br>Line Height: 1.7<br>Letter Spacing: 0.3px</td>
+                </tr>
+                <tr>
+                    <td>CTA Text <span class="category">(Call-to-Action)</span></td>
+                    <td>Font Size: 18px / 1.125rem<br>Font Weight: 700<br>Line Height: 1.4<br>Letter Spacing: 0.1px</td>
+                    <td>Font Size: 16px / 1rem<br>Font Weight: 700<br>Line Height: 1.5<br>Letter Spacing: 0.1px</td>
+                    <td>Font Size: 14px / 0.875rem<br>Font Weight: 700<br>Line Height: 1.6<br>Letter Spacing: 0.1px</td>
+                </tr>
+                <tr>
+                    <td>Blockquote <span class="category">(Quote Text)</span></td>
+                    <td>Font Size: 20px / 1.25rem<br>Font Weight: 400<br>Line Height: 1.6<br>Letter Spacing: 0px</td>
+                    <td>Font Size: 18px / 1.125rem<br>Font Weight: 400<br>Line Height: 1.6<br>Letter Spacing: 0px</td>
+                    <td>Font Size: 16px / 1rem<br>Font Weight: 400<br>Line Height: 1.6<br>Letter Spacing: 0px</td>
+                </tr>
+                <tr>
+                    <td>Caption <span class="category">(Image Caption)</span></td>
+                    <td>Font Size: 14px / 0.875rem<br>Font Weight: 400<br>Line Height: 1.5<br>Letter Spacing: 0px</td>
+                    <td>Font Size: 12px / 0.75rem<br>Font Weight: 400<br>Line Height: 1.5<br>Letter Spacing: 0px</td>
+                    <td>Font Size: 12px / 0.75rem<br>Font Weight: 400<br>Line Height: 1.5<br>Letter Spacing: 0px</td>
+                </tr>
+                <tr>
+                    <td>Small Text <span class="category">(Legal/Footnotes)</span></td>
+                    <td>Font Size: 12px / 0.75rem<br>Font Weight: 400<br>Line Height: 1.5<br>Letter Spacing: 0px</td>
+                    <td>Font Size: 10px / 0.625rem<br>Font Weight: 400<br>Line Height: 1.5<br>Letter Spacing: 0px</td>
+                    <td>Font Size: 10px / 0.625rem<br>Font Weight: 400<br>Line Height: 1.5<br>Letter Spacing: 0px</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <script>
+        document.body.addEventListener('mousemove', function(e) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+
+            // Set random size between 5px and 20px
+            const size = Math.random() * 15 + 5; // Size between 5 and 20
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+
+            // Set random position slightly offset from the cursor
+            const offsetX = (Math.random() - 0.5) * 30; // Random offset between -15 and 15
+            const offsetY = (Math.random() - 0.5) * 30; // Random offset between -15 and 15
+            particle.style.left = `${e.pageX + offsetX}px`;
+            particle.style.top = `${e.pageY + offsetY}px`;
+
+            // Set a random duration for the fade-out animation between 0.5s and 2s
+            const duration = Math.random() * 1.5 + 0.5; // Duration between 0.5s and 2s
+            particle.style.animationDuration = `${duration}s`;
+
+            document.body.appendChild(particle);
+
+            // Remove the particle after the animation completes
+            setTimeout(() => {
+                particle.remove();
+            }, duration * 1000); // Convert duration to milliseconds
+        });
+    </script>
+
+</body>
+</html>
